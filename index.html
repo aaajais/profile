@@ -161,7 +161,7 @@
             }
         }
 
-      
+
         /* MOBILE SLIDE VIEW */
         @media (max-width: 768px) {
             body {
@@ -189,7 +189,137 @@
                 display: none;
             }
         }
+
+        /* =========================
+   GLOBAL RESPONSIVE FIXES
+========================= */
+        html {
+            scroll-behavior: smooth;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+        }
+
+        .container {
+            padding: 16px;
+        }
+
+        /* =========================
+   LARGE SCREENS (DESKTOP)
+========================= */
+        @media (min-width: 1200px) {
+            .header-info h1 {
+                font-size: 36px;
+            }
+        }
+
+        /* =========================
+   TABLET VIEW (768px–1024px)
+========================= */
+        @media (max-width: 1024px) {
+            .header {
+                padding: 28px;
+            }
+
+            .header-info h1 {
+                font-size: 28px;
+            }
+
+            .skills {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        /* =========================
+   MOBILE VIEW (<=768px)
+========================= */
+        @media (max-width: 768px) {
+
+            body {
+                overflow-x: hidden;
+            }
+
+            .header {
+                flex-direction: column;
+                text-align: center;
+                padding: 24px;
+            }
+
+            .avatar {
+                width: 110px;
+                height: 110px;
+            }
+
+            .header-info h1 {
+                font-size: 24px;
+            }
+
+            .header-info h3 {
+                font-size: 16px;
+            }
+
+            .header-info p {
+                font-size: 14px;
+                line-height: 1.6;
+            }
+
+            .links {
+                justify-content: center;
+            }
+
+            .links a {
+                font-size: 13px;
+                padding: 8px 14px;
+            }
+
+            .section {
+                padding: 20px;
+                margin-top: 20px;
+            }
+
+            .section h2 {
+                font-size: 20px;
+                text-align: center;
+            }
+
+            .skills {
+                grid-template-columns: 1fr;
+            }
+
+            .job h4 {
+                font-size: 16px;
+            }
+
+            .job span {
+                font-size: 13px;
+            }
+
+            ul {
+                padding-left: 16px;
+            }
+        }
+
+        /* =========================
+   EXTRA SMALL DEVICES (<=400px)
+========================= */
+        @media (max-width: 400px) {
+            .header-info h1 {
+                font-size: 22px;
+            }
+
+            .avatar {
+                width: 95px;
+                height: 95px;
+            }
+
+            .links a {
+                padding: 7px 12px;
+            }
+        }
     </style>
+
 </head>
 
 <body>
