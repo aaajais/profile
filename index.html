@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Abhishek Jaiswal | QA Test Engineer</title>
+
+    <style>
+        :root {
+            --primary: #4f46e5;
+            --secondary: #22c55e;
+            --dark: #0f172a;
+            --light: #f8fafc;
+            --card: #ffffff;
+            --gray: #64748b;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Segoe UI, sans-serif
+        }
+
+        body {
+            background: var(--light);
+            color: var(--dark)
+        }
+
+        .container {
+            max-width: 1100px;
+            margin: auto;
+            padding: 20px
+        }
+
+        /* HEADER */
+        .header {
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            color: #fff;
+            padding: 35px;
+            border-radius: 18px;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 25px;
+            align-items: center;
+        }
+
+        .avatar {
+            width: 130px;
+            height: 130px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 4px solid #fff;
+            box-shadow: 0 12px 25px rgba(0, 0, 0, .3);
+        }
+
+        .header-info h1 {
+            font-size: 32px
+        }
+
+        .header-info h3 {
+            font-weight: 500;
+            margin: 6px 0 10px
+        }
+
+        .header-info p {
+            max-width: 650px;
+            opacity: .95
+        }
+
+        /* LINKS */
+        .links {
+            margin-top: 15px;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px
+        }
+
+        .links a {
+            background: #fff;
+            color: var(--dark);
+            text-decoration: none;
+            padding: 10px 18px;
+            border-radius: 25px;
+            font-weight: 600;
+            transition: .3s;
+        }
+
+        .links a:hover {
+            background: var(--dark);
+            color: #fff;
+            transform: translateY(-2px);
+        }
+
+        /* SECTION */
+        .section {
+            background: var(--card);
+            margin-top: 30px;
+            padding: 28px;
+            border-radius: 18px;
+            box-shadow: 0 15px 35px rgba(0, 0, 0, .08);
+        }
+
+        .section h2 {
+            color: var(--primary);
+            margin-bottom: 16px;
+        }
+
+        /* SKILLS */
+        .skills {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 14px;
+        }
+
+        .skill {
+            background: linear-gradient(135deg, #e0e7ff, #ecfeff);
+            padding: 12px;
+            border-radius: 10px;
+            font-weight: 600;
+            text-align: center;
+        }
+
+        /* JOB */
+        .job {
+            margin-bottom: 18px
+        }
+
+        .job h4 {
+            font-size: 18px
+        }
+
+        .job span {
+            font-size: 14px;
+            color: var(--gray)
+        }
+
+        ul {
+            margin-left: 18px
+        }
+
+        li {
+            margin-bottom: 6px
+        }
+
+        footer {
+            text-align: center;
+            margin: 30px 0;
+            color: var(--gray)
+        }
+
+        @media(max-width:600px) {
+            .header {
+                text-align: center;
+                justify-content: center
+            }
+
+            .links {
+                justify-content: center
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+
+        <!-- HEADER -->
+        <div class="header">
+            <img src="https://media.licdn.com/dms/image/v2/D5603AQFFf3xIWA_F4w/profile-displayphoto-shrink_200_200/B56ZcnGiKqHoAY-/0/1748707714991?e=1768435200&v=beta&t=UFvIY_rggu_GqeBZ6s362kmI8jg8fq5369fFkJUSR7U"
+                alt="Abhishek Jaiswal" class="avatar" />
+
+            <div class="header-info">
+                <h1>Abhishek Jaiswal</h1>
+                <h3>QA / Automation Test Engineer</h3>
+                <p><strong>📍 Location:</strong> Ahmedabad, India</p>
+
+
+
+                <p>
+                    Dedicated and detail-oriented QA professional with 3.5+ years of experience
+                    in Manual and Automation Testing. Strong foundation in software testing
+                    methodologies with hands-on experience in Cypress, Playwright, Selenium,
+                    API testing, and Agile environments.
+                </p>
+
+                <div class="links">
+                    <a href="mailto:17scse104024@gmail.com">📧 Email</a>
+                    <a href="https://github.com/aaajais" target="_blank">🐙 GitHub</a>
+                    <a href="https://www.linkedin.com/in/abhishek-jaiswal-98649a17a/" target="_blank">💼 LinkedIn</a>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- SKILLS -->
+        <div class="section">
+            <h2>Technical Skills</h2>
+            <div class="skills">
+                <div class="skill">Manual Testing</div>
+                <div class="skill">Automation Testing</div>
+                <div class="skill">Cypress</div>
+                <div class="skill">Playwright</div>
+                <div class="skill">Selenium</div>
+                <div class="skill">JavaScript / TypeScript</div>
+                <div class="skill">API Testing (Postman)</div>
+                <div class="skill">JIRA</div>
+                <div class="skill">Jenkins CI/CD</div>
+                <div class="skill">Agile / Scrum</div>
+                <div class="skill">Mobile Testing (Android & iOS)</div>
+            </div>
+        </div>
+
+        <!-- GITHUB -->
+        <!-- GITHUB PROJECTS -->
+        <div class="section">
+            <h2>GitHub Projects</h2>
+
+            <div class="job">
+                <h4>Playwright Automation(Myntra)</h4>
+                <span>TypeScript | Playwright</span>
+                <p>
+                    End-to-end automation framework using Playwright with POM structure,
+                    reusable utilities, and CI-ready setup.
+                </p>
+                <a href="https://github.com/aaajais/playwright-testing" target="_blank">🔗 View on GitHub</a>
+            </div>
+
+            <div class="job">
+                <h4>Cypress Automation Demo</h4>
+                <span>JavaScript | Cypress</span>
+                <p>
+                    Cypress automation project covering UI and functional test cases
+                    with BDD-style structure and reusable commands.
+                </p>
+                <a href="https://github.com/aaajais/cypressdemo" target="_blank">🔗 View on GitHub</a>
+            </div>
+
+            <div class="job">
+                <h4>E-Commerce Automation Project</h4>
+                <span>TypeScript | Automation Testing</span>
+                <p>
+                    Automation testing for e-commerce workflows including login,
+                    product search, add-to-cart, and checkout scenarios.
+                </p>
+                <a href="https://github.com/aaajais/E-Commerce" target="_blank">🔗 View on GitHub</a>
+            </div>
+
+        </div>
+
+
+        <!-- EXPERIENCE -->
+        <!-- EXPERIENCE -->
+        <div class="section">
+            <h2>Work Experience</h2>
+
+            <div class="job">
+                <h4>QA Engineer – NetAI Inc</h4>
+                <span>Jun 2025 – Present | Ahmedabad, Gujarat (On-site)</span>
+                <ul>
+                    <li>Working as a QA Engineer focusing on Software Quality and Test Assurance</li>
+                    <li>Actively involved in Automation Testing using Cypress</li>
+                    <li>Collaborating closely with developers to improve product quality</li>
+                </ul>
+            </div>
+
+            <div class="job">
+                <h4>QA Engineer – Marqd Growth Partners Pvt Ltd</h4>
+                <span>Jul 2024 – Jun 2025 | Noida, Uttar Pradesh (Hybrid)</span>
+                <ul>
+                    <li>Created and executed test cases for registration, login, product search, and payment gateway
+                    </li>
+                    <li>Performed Functional, Regression, Smoke, and Sanity Testing</li>
+                    <li>Designed and executed 300+ test cases for Web & Mobility applications</li>
+                    <li>Reported and tracked 400+ defects using JIRA, reducing issue resolution time by 20%</li>
+                    <li>Hands-on experience in API Testing and Agile methodology</li>
+                    <li>Strong collaboration and communication with cross-functional teams</li>
+                </ul>
+            </div>
+
+            <div class="job">
+                <h4>QA Engineer – Interra Information Technologies (InterraIT)</h4>
+                <span>Jul 2022 – Sep 2023 | Noida, Uttar Pradesh</span>
+                <ul>
+                    <li>Executed manual and automated test cases to identify defects</li>
+                    <li>Covered functionalities such as login, logout, file upload, and search</li>
+                    <li>Worked extensively on SDLC & STLC processes</li>
+                    <li>Performed ad-hoc, smoke, regression, and sanity testing</li>
+                    <li>Created BDD (Gherkin) test scenarios using Cypress</li>
+                    <li>Hands-on exposure to Apache JMeter and Jira</li>
+                </ul>
+            </div>
+
+            <div class="job">
+                <h4>Trainee – InterraIT</h4>
+                <span>Jan 2022 – Jul 2022 | Noida, Uttar Pradesh</span>
+                <ul>
+                    <li>Learned fundamentals of Manual and Automation Testing</li>
+                    <li>Created test cases and executed test scenarios</li>
+                    <li>Gained practical exposure to real-time QA processes</li>
+                </ul>
+            </div>
+
+        </div>
+
+
+        <!-- PROJECTS -->
+        <div class="section">
+            <h2>Projects</h2>
+            <ul>
+                <li><strong>NetAI Testing</strong> – Functional, Regression & Usability testing-(Automation Testing)</li>
+                <li><strong>E-Commerce Website Testing</strong> – Functional, Regression & Usability testing</li>
+                <li><strong>Subeez SaaS PWA</strong> – BDD (Gherkin) automation using Cypress</li>
+                <li><strong>Customer Insights Mobile App</strong> – VIN scanning & customer data validation</li>
+                <li><strong>Sales Reports Mobile App</strong> – Pie, Bar & Report visual testing</li>
+                <li><strong>Inventory Search Mobile App</strong> – Dealer & vehicle-based inventory search</li>
+            </ul>
+        </div>
+
+        <!-- EDUCATION -->
+        <div class="section">
+            <h2>Education</h2>
+            <p><strong>Master of Computer Applications (MCA)</strong> – Galgotias University (2020–2022)</p>
+            <p><strong>Bachelor of Computer Applications (BCA)</strong> – Galgotias University (2017–2020)</p>
+        </div>
+
+        <footer>
+            © 2025 Abhishek Jaiswal | QA Test Engineer
+        </footer>
+
+    </div>
+</body>
+
+</html>
