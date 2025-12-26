@@ -20,30 +20,53 @@
             margin: 0;
             padding: 0;
             box-sizing: border-box;
-            font-family: Segoe UI, sans-serif
+            font-family: Segoe UI, sans-serif;
         }
 
         body {
             background: var(--light);
-            color: var(--dark)
+            color: var(--dark);
         }
 
         .container {
             max-width: 1100px;
             margin: auto;
-            padding: 20px
+            padding: 20px;
+        }
+
+        /* =========================
+            CARD STYLES
+        ========================= */
+        .card {
+            background: var(--card);
+            border-radius: 20px;
+            padding: 30px;
+            margin-bottom: 30px;
+            box-shadow: 0 15px 35px rgba(0, 0, 0, .1);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 45px rgba(0, 0, 0, .15);
+        }
+
+        .card h2 {
+            color: var(--primary);
+            margin-bottom: 18px;
+            text-align: center;
         }
 
         /* HEADER */
         .header {
             background: linear-gradient(135deg, var(--primary), var(--secondary));
             color: #fff;
-            padding: 35px;
-            border-radius: 18px;
             display: flex;
             flex-wrap: wrap;
             gap: 25px;
             align-items: center;
+            border-radius: 20px;
+            padding: 35px;
         }
 
         .avatar {
@@ -56,17 +79,17 @@
         }
 
         .header-info h1 {
-            font-size: 32px
+            font-size: 32px;
         }
 
         .header-info h3 {
             font-weight: 500;
-            margin: 6px 0 10px
+            margin: 6px 0 10px;
         }
 
         .header-info p {
             max-width: 650px;
-            opacity: .95
+            opacity: .95;
         }
 
         /* LINKS */
@@ -74,7 +97,7 @@
             margin-top: 15px;
             display: flex;
             flex-wrap: wrap;
-            gap: 12px
+            gap: 12px;
         }
 
         .links a {
@@ -93,20 +116,6 @@
             transform: translateY(-2px);
         }
 
-        /* SECTION */
-        .section {
-            background: var(--card);
-            margin-top: 30px;
-            padding: 28px;
-            border-radius: 18px;
-            box-shadow: 0 15px 35px rgba(0, 0, 0, .08);
-        }
-
-        .section h2 {
-            color: var(--primary);
-            margin-bottom: 16px;
-        }
-
         /* SKILLS */
         .skills {
             display: grid;
@@ -122,125 +131,49 @@
             text-align: center;
         }
 
-        /* JOB */
+        /* JOBS / PROJECTS */
         .job {
-            margin-bottom: 18px
+            margin-bottom: 18px;
         }
 
         .job h4 {
-            font-size: 18px
+            font-size: 18px;
         }
 
         .job span {
             font-size: 14px;
-            color: var(--gray)
+            color: var(--gray);
         }
 
         ul {
-            margin-left: 18px
+            margin-left: 18px;
         }
 
         li {
-            margin-bottom: 6px
+            margin-bottom: 6px;
         }
 
         footer {
             text-align: center;
             margin: 30px 0;
-            color: var(--gray)
+            color: var(--gray);
         }
 
+        /* =========================
+            RESPONSIVE
+        ========================= */
         @media(max-width:600px) {
             .header {
                 text-align: center;
-                justify-content: center
+                justify-content: center;
             }
 
             .links {
-                justify-content: center
+                justify-content: center;
             }
         }
 
-
-        /* MOBILE SLIDE VIEW */
-        @media (max-width: 768px) {
-            body {
-                overflow: hidden;
-            }
-
-            .container {
-                display: flex;
-                flex-direction: row;
-                overflow-x: auto;
-                scroll-snap-type: x mandatory;
-                height: 100vh;
-            }
-
-            .section,
-            .header {
-                min-width: 100vw;
-                height: 100vh;
-                scroll-snap-align: start;
-                overflow-y: auto;
-                border-radius: 0;
-            }
-
-            footer {
-                display: none;
-            }
-        }
-
-        /* =========================
-   GLOBAL RESPONSIVE FIXES
-========================= */
-        html {
-            scroll-behavior: smooth;
-        }
-
-        img {
-            max-width: 100%;
-            height: auto;
-        }
-
-        .container {
-            padding: 16px;
-        }
-
-        /* =========================
-   LARGE SCREENS (DESKTOP)
-========================= */
-        @media (min-width: 1200px) {
-            .header-info h1 {
-                font-size: 36px;
-            }
-        }
-
-        /* =========================
-   TABLET VIEW (768px–1024px)
-========================= */
-        @media (max-width: 1024px) {
-            .header {
-                padding: 28px;
-            }
-
-            .header-info h1 {
-                font-size: 28px;
-            }
-
-            .skills {
-                grid-template-columns: repeat(2, 1fr);
-            }
-        }
-
-        /* =========================
-   MOBILE VIEW (<=768px)
-========================= */
-        @media (max-width: 768px) {
-
-            body {
-                overflow-x: hidden;
-            }
-
+        @media(max-width:768px) {
             .header {
                 flex-direction: column;
                 text-align: center;
@@ -265,46 +198,17 @@
                 line-height: 1.6;
             }
 
-            .links {
-                justify-content: center;
-            }
-
             .links a {
                 font-size: 13px;
                 padding: 8px 14px;
             }
 
-            .section {
-                padding: 20px;
-                margin-top: 20px;
-            }
-
-            .section h2 {
-                font-size: 20px;
-                text-align: center;
-            }
-
             .skills {
                 grid-template-columns: 1fr;
             }
-
-            .job h4 {
-                font-size: 16px;
-            }
-
-            .job span {
-                font-size: 13px;
-            }
-
-            ul {
-                padding-left: 16px;
-            }
         }
 
-        /* =========================
-   EXTRA SMALL DEVICES (<=400px)
-========================= */
-        @media (max-width: 400px) {
+        @media(max-width:400px) {
             .header-info h1 {
                 font-size: 22px;
             }
@@ -319,42 +223,35 @@
             }
         }
     </style>
-
 </head>
 
 <body>
     <div class="container">
 
         <!-- HEADER -->
-        <div class="header">
+        <div class="card header">
             <img src="https://media.licdn.com/dms/image/v2/D5603AQFFf3xIWA_F4w/profile-displayphoto-shrink_200_200/B56ZcnGiKqHoAY-/0/1748707714991?e=1768435200&v=beta&t=UFvIY_rggu_GqeBZ6s362kmI8jg8fq5369fFkJUSR7U"
                 alt="Abhishek Jaiswal" class="avatar" />
-
             <div class="header-info">
                 <h1>Abhishek Jaiswal</h1>
                 <h3>QA / Automation Test Engineer</h3>
                 <p><strong>📍 Location:</strong> Ahmedabad, India</p>
-
-
-
                 <p>
                     Dedicated and detail-oriented QA professional with 3.5+ years of experience
                     in Manual and Automation Testing. Strong foundation in software testing
                     methodologies with hands-on experience in Cypress, Playwright, Selenium,
                     API testing, and Agile environments.
                 </p>
-
                 <div class="links">
                     <a href="mailto:17scse104024@gmail.com">📧 Email</a>
                     <a href="https://github.com/aaajais" target="_blank">🐙 GitHub</a>
                     <a href="https://www.linkedin.com/in/abhishek-jaiswal-98649a17a/" target="_blank">💼 LinkedIn</a>
                 </div>
-
             </div>
         </div>
 
         <!-- SKILLS -->
-        <div class="section">
+        <div class="card">
             <h2>Technical Skills</h2>
             <div class="skills">
                 <div class="skill">Manual Testing</div>
@@ -371,49 +268,38 @@
             </div>
         </div>
 
-        <!-- GITHUB -->
         <!-- GITHUB PROJECTS -->
-        <div class="section">
+        <div class="card">
             <h2>GitHub Projects</h2>
-
             <div class="job">
                 <h4>Playwright Automation(Myntra)</h4>
                 <span>TypeScript | Playwright</span>
-                <p>
-                    End-to-end automation framework using Playwright with POM structure,
-                    reusable utilities, and CI-ready setup.
-                </p>
+                <p>End-to-end automation framework using Playwright with POM structure, reusable utilities, and CI-ready setup.</p>
                 <a href="https://github.com/aaajais/playwright-testing" target="_blank">🔗 View on GitHub</a>
             </div>
-
             <div class="job">
                 <h4>Cypress Automation Demo</h4>
                 <span>JavaScript | Cypress</span>
-                <p>
-                    Cypress automation project covering UI and functional test cases
-                    with BDD-style structure and reusable commands.
-                </p>
+                <p>Cypress automation project covering UI and functional test cases with BDD-style structure and reusable commands.</p>
                 <a href="https://github.com/aaajais/cypressdemo" target="_blank">🔗 View on GitHub</a>
             </div>
-
             <div class="job">
                 <h4>E-Commerce Automation Project</h4>
                 <span>TypeScript | Automation Testing</span>
-                <p>
-                    Automation testing for e-commerce workflows including login,
-                    product search, add-to-cart, and checkout scenarios.
-                </p>
+                <p>Automation testing for e-commerce workflows including login, product search, add-to-cart, and checkout scenarios.</p>
                 <a href="https://github.com/aaajais/E-Commerce" target="_blank">🔗 View on GitHub</a>
             </div>
-
+             <div class="job">
+                <h4>Profile Project</h4>
+                <span>JavaScript | Profile</span>
+                <p>Profile-Added LinkedIn profile, Git Project, Email, and GitHub links.</p>
+                <a href="https://github.com/aaajais/profile" target="_blank">🔗 View on GitHub</a>
+            </div>
         </div>
 
-
-        <!-- EXPERIENCE -->
-        <!-- EXPERIENCE -->
-        <div class="section">
+        <!-- WORK EXPERIENCE -->
+        <div class="card">
             <h2>Work Experience</h2>
-
             <div class="job">
                 <h4>QA Engineer – NetAI Inc</h4>
                 <span>Jun 2025 – Present | Ahmedabad, Gujarat (On-site)</span>
@@ -423,13 +309,11 @@
                     <li>Collaborating closely with developers to improve product quality</li>
                 </ul>
             </div>
-
             <div class="job">
                 <h4>QA Engineer – Marqd Growth Partners Pvt Ltd</h4>
                 <span>Jul 2024 – Jun 2025 | Noida, Uttar Pradesh (Hybrid)</span>
                 <ul>
-                    <li>Created and executed test cases for registration, login, product search, and payment gateway
-                    </li>
+                    <li>Created and executed test cases for registration, login, product search, and payment gateway</li>
                     <li>Performed Functional, Regression, Smoke, and Sanity Testing</li>
                     <li>Designed and executed 300+ test cases for Web & Mobility applications</li>
                     <li>Reported and tracked 400+ defects using JIRA, reducing issue resolution time by 20%</li>
@@ -437,39 +321,13 @@
                     <li>Strong collaboration and communication with cross-functional teams</li>
                 </ul>
             </div>
-
-            <div class="job">
-                <h4>QA Engineer – Interra Information Technologies (InterraIT)</h4>
-                <span>Jul 2022 – Sep 2023 | Noida, Uttar Pradesh</span>
-                <ul>
-                    <li>Executed manual and automated test cases to identify defects</li>
-                    <li>Covered functionalities such as login, logout, file upload, and search</li>
-                    <li>Worked extensively on SDLC & STLC processes</li>
-                    <li>Performed ad-hoc, smoke, regression, and sanity testing</li>
-                    <li>Created BDD (Gherkin) test scenarios using Cypress</li>
-                    <li>Hands-on exposure to Apache JMeter and Jira</li>
-                </ul>
-            </div>
-
-            <div class="job">
-                <h4>Trainee – InterraIT</h4>
-                <span>Jan 2022 – Jul 2022 | Noida, Uttar Pradesh</span>
-                <ul>
-                    <li>Learned fundamentals of Manual and Automation Testing</li>
-                    <li>Created test cases and executed test scenarios</li>
-                    <li>Gained practical exposure to real-time QA processes</li>
-                </ul>
-            </div>
-
         </div>
 
-
         <!-- PROJECTS -->
-        <div class="section">
+        <div class="card">
             <h2>Projects</h2>
             <ul>
-                <li><strong>NetAI Testing</strong> – Functional, Regression & Usability testing-(Automation Testing)
-                </li>
+                <li><strong>NetAI Testing</strong> – Functional, Regression & Usability testing-(Automation Testing)</li>
                 <li><strong>E-Commerce Website Testing</strong> – Functional, Regression & Usability testing</li>
                 <li><strong>Subeez SaaS PWA</strong> – BDD (Gherkin) automation using Cypress</li>
                 <li><strong>Customer Insights Mobile App</strong> – VIN scanning & customer data validation</li>
@@ -479,7 +337,7 @@
         </div>
 
         <!-- EDUCATION -->
-        <div class="section">
+        <div class="card">
             <h2>Education</h2>
             <p><strong>Master of Computer Applications (MCA)</strong> – Galgotias University (2020–2022)</p>
             <p><strong>Bachelor of Computer Applications (BCA)</strong> – Galgotias University (2017–2020)</p>
@@ -488,7 +346,6 @@
         <footer>
             © 2025 Abhishek Jaiswal | QA Test Engineer
         </footer>
-
     </div>
 </body>
 
