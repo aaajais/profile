@@ -160,6 +160,35 @@
                 justify-content: center
             }
         }
+
+      
+        /* MOBILE SLIDE VIEW */
+        @media (max-width: 768px) {
+            body {
+                overflow: hidden;
+            }
+
+            .container {
+                display: flex;
+                flex-direction: row;
+                overflow-x: auto;
+                scroll-snap-type: x mandatory;
+                height: 100vh;
+            }
+
+            .section,
+            .header {
+                min-width: 100vw;
+                height: 100vh;
+                scroll-snap-align: start;
+                overflow-y: auto;
+                border-radius: 0;
+            }
+
+            footer {
+                display: none;
+            }
+        }
     </style>
 </head>
 
@@ -309,7 +338,8 @@
         <div class="section">
             <h2>Projects</h2>
             <ul>
-                <li><strong>NetAI Testing</strong> – Functional, Regression & Usability testing-(Automation Testing)</li>
+                <li><strong>NetAI Testing</strong> – Functional, Regression & Usability testing-(Automation Testing)
+                </li>
                 <li><strong>E-Commerce Website Testing</strong> – Functional, Regression & Usability testing</li>
                 <li><strong>Subeez SaaS PWA</strong> – BDD (Gherkin) automation using Cypress</li>
                 <li><strong>Customer Insights Mobile App</strong> – VIN scanning & customer data validation</li>
